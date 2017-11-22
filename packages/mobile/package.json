@@ -1,0 +1,28 @@
+{
+  "name": "@saveournet/mobile",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "add:pack": "lerna add --scope=@saveournet/mobile",
+    "start:ios": "node node_modules/react-native/local-cli/cli.js run-ios"
+  },
+  "dependencies": {
+    "@saveournet/sugar": "*",
+    "react": "16.0.0",
+    "react-native": "0.50.3"
+  },
+  "devDependencies": {
+    "babel-jest": "21.2.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-react-native": "4.0.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "jest": "21.2.1",
+    "react-test-renderer": "16.0.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
