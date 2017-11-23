@@ -30,7 +30,8 @@ class Provider extends PureComponent {
     let {width, height} = event.nativeEvent.layout
     // TODO: Redactor cleaner way to get breakpoint index
     let breakpointNum = this.state.theme.breakpoints.filter(
-      setPoint => (setPoint >= width && this.state.theme.breakpoints.indexOf(setPoint))
+      setPoint =>
+        (setPoint >= width && this.state.theme.breakpoints.indexOf(setPoint))
     )[0]
     const breakpoint = this.state.theme.breakpoints.indexOf(breakpointNum)
     this.setState({dimensions: {width, height, breakpoint}})

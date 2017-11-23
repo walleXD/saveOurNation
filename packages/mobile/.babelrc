@@ -2,9 +2,16 @@
   "presets": [
     "es2017",
     "stage-0",
-    "react-native"
+    "babel-preset-expo"
   ],
   "plugins": [
     "transform-decorators-legacy"
-  ]
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "transform-react-jsx-source"
+      ]
+    }
+  }
 }

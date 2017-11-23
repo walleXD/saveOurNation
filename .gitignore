@@ -1,5 +1,6 @@
 ### Project ###
 dist/
+packages/mobile_rn
 
 ### Android ###
 # Built application files

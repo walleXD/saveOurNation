@@ -2,6 +2,7 @@
   "name": "@saveournet/sugar",
   "version": "0.0.0",
   "license": "MIT",
+  "main": "src/index.js",
   "scripts": {
     "add:pack": "lerna add --scope=@saveournet/sugar",
     "storybook": "start-storybook -p 6006",
