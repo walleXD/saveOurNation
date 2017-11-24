@@ -14,6 +14,6 @@ class App extends React.Component {
 Expo.registerRootComponent(App)
 
 /*
-TODO: [ Basic ] - Setup firebase w/ redux
+TODO: [ Basic ] - Setup firebase example
 TODO: [ Feature ] - Integrate router w/ redux
 */
