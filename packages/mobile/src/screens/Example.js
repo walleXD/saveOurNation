@@ -3,6 +3,7 @@ import { View, Text, Button, StyleSheet } from 'react-native'
 import { StackNavigator } from 'react-navigation'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import { Ionicons } from '@expo/vector-icons'
 
 import {
   increment,
@@ -29,7 +30,10 @@ const mapDispatchProps = dispatch =>
 @connect(mapStateProps, mapDispatchProps)
 class ExamplePage extends Component {
   static navigationOptions = {
-    title: 'Example'
+    title: 'Example',
+    tabBarIcon: ({ tintColor }) => (
+      <Ionicons name="md-beer" size={20} style={{ color: tintColor }} />
+    )
   }
 
   render() {
