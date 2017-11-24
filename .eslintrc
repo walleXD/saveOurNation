@@ -7,7 +7,6 @@
   "extends": [
     "prettier",
     "plugin:react/recommended",
-    "plugin:react-native/recommended",
     "prettier/react"
   ],
   "parserOptions": {

@@ -1,10 +1,15 @@
-import 'rxjs/Rx'
-import Expo from 'expo'
-import React, { Component } from 'react'
+import "rxjs/Rx"
+import Expo from "expo"
+import React, { Component } from "react"
 
-import Screens from './screens'
+import Screens from "./screens"
+
+import api from "./api"
 
 class App extends Component {
+  componentDidMount() {
+    api()
+  }
   render() {
     return <Screens />
   }
