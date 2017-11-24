@@ -1,16 +1,74 @@
 import React, { Component } from 'react'
-import { View, Text, SafeAreaView } from 'react-native'
+import { View, Text, Button, StyleSheet } from 'react-native'
+import { StackNavigator } from 'react-navigation'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 
+import {
+  increment,
+  decrement,
+  incrementAsync,
+  decrementAsync
+} from '../actions/example'
+
+const mapStateProps = ({ example }) => ({
+  score: example.score
+})
+
+const mapDispatchProps = dispatch =>
+  bindActionCreators(
+    {
+      increment,
+      decrement,
+      incrementAsync,
+      decrementAsync
+    },
+    dispatch
+  )
+
+@connect(mapStateProps, mapDispatchProps)
 class ExamplePage extends Component {
+  static navigationOptions = {
+    title: 'Example'
+  }
+
   render() {
     return (
-      <SafeAreaView>
+      <View>
+        <Text style={{ padding: 20 }}>{this.props.score}</Text>
         <View>
-          <Text>Example Screen</Text>
+          <Text>Actions</Text>
+          <View style={buttonContainer}>
+            <Button onPress={() => this.props.increment(1)} title="Add" />
+            <Button onPress={() => this.props.decrement(1)} title="Substract" />
+          </View>
         </View>
-      </SafeAreaView>
+        <View>
+          <Text>Async Actions</Text>
+          <View style={buttonContainer}>
+            <Button
+              onPress={() => this.props.incrementAsync(2)}
+              title="Async Add"
+            />
+            <Button
+              onPress={() => this.props.decrementAsync(2)}
+              title="Async Substract"
+            />
+          </View>
+        </View>
+      </View>
     )
   }
 }
 
-export default ExamplePage
+const { buttonContainer } = StyleSheet.create({
+  buttonContainer: {
+    flexDirection: 'row'
+  }
+})
+
+export default StackNavigator({
+  Example: {
+    screen: ExamplePage
+  }
+})
