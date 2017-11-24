@@ -6,8 +6,8 @@ import { reduxFirestore, getFirestore } from 'redux-firestore'
 import firebase from 'firebase'
 import 'firebase/firestore'
 
-import reducers from '../reducers'
-import epics from '../epics'
+import reducers from 'reducers'
+import epics from 'epics'
 
 import {
   API_KEY,

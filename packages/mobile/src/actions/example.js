@@ -3,7 +3,7 @@ import {
   decrement as decrementType,
   incrementAsync as incrementAsyncType,
   decrementAsync as decrementAsyncType
-} from '../lib/types'
+} from 'lib/types'
 
 export const increment = payload => ({
   type: incrementType,

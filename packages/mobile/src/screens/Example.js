@@ -10,7 +10,7 @@ import {
   decrement,
   incrementAsync,
   decrementAsync
-} from '../actions/example'
+} from 'actions/example'
 
 const mapStateProps = ({ example }) => ({
   score: example.score

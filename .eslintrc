@@ -1,0 +1,27 @@
+{
+  "plugins": [
+    "react",
+    "prettier",
+    "react-native"
+  ],
+  "extends": [
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:react-native/recommended",
+    "prettier/react"
+  ],
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "react-native/react-native": true
+  },
+  "rules": {
+    "prettier/prettier": "error"
+  }
+}

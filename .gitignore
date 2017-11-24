@@ -1,6 +1,7 @@
 ### Project ###
 dist/
 packages/mobile_rn
+*.env.*
 
 ### Android ###
 # Built application files

@@ -6,7 +6,21 @@
     "react-native-dotenv"
   ],
   "plugins": [
-    "transform-decorators-legacy"
+    "transform-decorators-legacy",
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./src"
+        ],
+        "extensions": [
+          ".js",
+          ".ios.js",
+          ".android.js"
+        ],
+        "alias": {}
+      }
+    ]
   ],
   "env": {
     "development": {

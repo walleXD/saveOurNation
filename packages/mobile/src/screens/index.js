@@ -6,7 +6,7 @@ import { SafeAreaView } from 'react-native'
 import ExampleScreen from './Example'
 import LandingScreen from './Landing'
 
-import initStore from '../lib/initStore'
+import initStore from 'lib/initStore'
 
 const store = initStore()
 
