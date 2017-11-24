@@ -6,7 +6,7 @@ import { Broadcast } from 'react-broadcast'
 import defaultTheme from '../../lib/theme'
 
 class Provider extends PureComponent {
-  constructor (props) {
+  constructor(props) {
     super(props)
   }
 
@@ -20,24 +20,24 @@ class Provider extends PureComponent {
     dimensions: undefined
   }
 
-  componentWillMount () {
+  componentWillMount() {
     const theme = this.props.theme || defaultTheme
     this.setState({ theme })
   }
 
   onLayout = event => {
     if (this.state.dimensions) return // layout was already called
-    let {width, height} = event.nativeEvent.layout
-    // TODO: Redactor cleaner way to get breakpoint index
+    let { width, height } = event.nativeEvent.layout
+    // TODO: [ Refactor ] cleaner way to get breakpoint index
     let breakpointNum = this.state.theme.breakpoints.filter(
       setPoint =>
-        (setPoint >= width && this.state.theme.breakpoints.indexOf(setPoint))
+        setPoint >= width && this.state.theme.breakpoints.indexOf(setPoint)
     )[0]
     const breakpoint = this.state.theme.breakpoints.indexOf(breakpointNum)
-    this.setState({dimensions: {width, height, breakpoint}})
+    this.setState({ dimensions: { width, height, breakpoint } })
   }
 
-  render () {
+  render() {
     return (
       <View onLayout={this.onLayout}>
         <Broadcast

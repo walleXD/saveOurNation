@@ -1,22 +1,13 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
 import { Provider, Header } from '@saveournet/sugar'
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <Provider>
-        <View style={styles.container}>
-          <Header>Hello</Header>
-          <Text>Open up App.js to start working on your app!</Text>
-        </View>
-      </Provider>
-    );
-  }
-}
+import Screens from './src/screens'
 
-const styles = StyleSheet.create({
-  container: {
-    paddingTop: 200
-  },
-});
+export default () => <Screens />
+
+/*
+TODO: [ Basic ] - Setup redux observable
+TODO: [ Basic ] - Setup firebase w/ redux
+TODO: [ Feature ] - Integrate router w/ redux
+*/

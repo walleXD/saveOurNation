@@ -3,10 +3,18 @@
   "main": "node_modules/expo/AppEntry.js",
   "private": true,
   "dependencies": {
+    "@firebase/app": "^0.1.2",
+    "@firebase/firestore": "^0.1.4",
     "@saveournet/sugar": "*",
     "expo": "^23.0.0",
-    "react": "16.0.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-23.0.0.tar.gz"
+    "react": "^16.1.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-23.0.0.tar.gz",
+    "react-navigation": "^1.0.0-beta.21",
+    "react-redux": "^5.0.6",
+    "react-redux-firebase": "next",
+    "redux": "^3.7.2",
+    "redux-observable": "^0.17.0",
+    "remote-redux-devtools": "^0.5.12"
   },
   "scripts": {
     "add:pack": "lerna add --scope=@saveournet/mobile"
