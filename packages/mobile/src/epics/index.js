@@ -1,5 +1,6 @@
-import { combineEpics } from 'redux-observable'
+import { combineEpics } from "redux-observable"
 
-import exampleEpics from './example'
+import example from "./example"
+import search from "./search"
 
-export default combineEpics(...exampleEpics)
+export default combineEpics(...example, ...search)

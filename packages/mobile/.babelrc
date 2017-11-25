@@ -1,32 +1,19 @@
 {
-  "presets": [
-    "es2017",
-    "stage-0",
-    "babel-preset-expo",
-    "react-native-dotenv"
-  ],
+  "presets": ["es2017", "stage-0", "babel-preset-expo", "react-native-dotenv"],
   "plugins": [
     "transform-decorators-legacy",
     [
       "module-resolver",
       {
-        "root": [
-          "./src"
-        ],
-        "extensions": [
-          ".js",
-          ".ios.js",
-          ".android.js"
-        ],
+        "root": ["./src"],
+        "extensions": [".js", ".ios.js", ".android.js"],
         "alias": {}
       }
     ]
   ],
   "env": {
     "development": {
-      "plugins": [
-        "transform-react-jsx-source"
-      ]
+      "plugins": ["transform-react-jsx-source"]
     }
   }
 }

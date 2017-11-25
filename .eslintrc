@@ -1,16 +1,8 @@
 {
-  "plugins": [
-    "react",
-    "prettier",
-    "react-native"
-  ],
-  "extends": [
-    "prettier",
-    "plugin:react/recommended",
-    "prettier/react"
-  ],
+  "plugins": ["react", "prettier", "react-native"],
+  "extends": ["prettier", "plugin:react/recommended", "prettier/react"],
+  "parser": "babel-eslint",
   "parserOptions": {
-    "parser": "babel-eslint",
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
@@ -22,5 +14,14 @@
   },
   "rules": {
     "prettier/prettier": "error"
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {
+        "root": ["./packages/mobile/src"],
+        "extensions": [".js", ".ios.js", ".android.js"],
+        "alias": {}
+      }
+    }
   }
 }

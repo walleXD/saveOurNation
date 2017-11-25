@@ -1,5 +1,5 @@
-import { incrementAsync, decrementAsync } from 'lib/types'
-import { increment, decrement } from 'actions/example'
+import { incrementAsync, decrementAsync } from "lib/types"
+import { increment, decrement } from "actions/example"
 
 export default [
   action$ =>

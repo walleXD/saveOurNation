@@ -1,17 +1,36 @@
 import React, { PureComponent } from "react"
-import { View, Text, TextInput, TouchableOpacity, Picker } from "react-native"
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  Picker,
+  KeyboardAvoidingView
+} from "react-native"
 import { reduxForm, Field } from "redux-form"
+import { bindActionCreators } from "redux"
+import { connect } from "react-redux"
+import { func } from "prop-types"
 
+import { setAddress, findRepresentatives } from "actions/search"
 import states from "assets/states.json"
 
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ setAddress, findRepresentatives }, dispatch)
+
 @reduxForm({ form: "Searcher" })
+@connect(undefined, mapDispatchToProps)
 class Searcher extends PureComponent {
-  state = {
-    text: undefined
+  static propTypes = {
+    setAddress: func,
+    handleSubmit: func,
+    findRepresentatives: func
   }
 
   _onSumbit = value => {
-    console.log("input value", value)
+    this.props.setAddress(value)
+    this.props.findRepresentatives()
+    console.log("fired async action")
   }
 
   _renderStreetInput({ input }) {
@@ -61,7 +80,7 @@ class Searcher extends PureComponent {
 
   render() {
     return (
-      <View>
+      <KeyboardAvoidingView behavior={"height"}>
         <View style={{ flexDirection: "row" }}>
           <Text>Street</Text>
           <Field name="Street" component={this._renderStreetInput} />
@@ -81,7 +100,7 @@ class Searcher extends PureComponent {
         <TouchableOpacity onPress={this.props.handleSubmit(this._onSumbit)}>
           <Text>Submit</Text>
         </TouchableOpacity>
-      </View>
+      </KeyboardAvoidingView>
     )
   }
 }
