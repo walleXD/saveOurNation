@@ -1,13 +1,17 @@
 import React, { PureComponent } from "react"
 import { StackNavigator } from "react-navigation"
 import { Ionicons } from "@expo/vector-icons"
+import { string } from "prop-types"
 
 import Find from "./FindRepresentatives"
 import Found from "./FoundRepresentatives"
 
-const Navigations = StackNavigator({
+const SearchScreen = StackNavigator({
   Find: {
-    screen: Find
+    screen: Find,
+    navigationOptions: {
+      title: "Find Representatives"
+    }
   },
   Found: {
     path: "found",
@@ -15,16 +19,12 @@ const Navigations = StackNavigator({
   }
 })
 
-class SearchScreen extends PureComponent {
-  static navigationOptions = {
-    tabBarIcon: ({ tintColor }) => (
-      <Ionicons name="md-search" size={20} style={{ color: tintColor }} />
-    )
-  }
+export const Icon = ({ tintColor }) => (
+  <Ionicons name="md-search" size={20} style={{ color: tintColor }} />
+)
 
-  render() {
-    return <Navigations />
-  }
+Icon.propTypes = {
+  tintColor: string
 }
 
 export default SearchScreen

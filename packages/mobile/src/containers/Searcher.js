@@ -12,11 +12,18 @@ import { bindActionCreators } from "redux"
 import { connect } from "react-redux"
 import { func } from "prop-types"
 
-import { setAddress, findRepresentatives } from "actions/search"
+import {
+  setAddress,
+  findRepresentatives,
+  setLoadingStatus
+} from "actions/search"
 import states from "assets/states.json"
 
 const mapDispatchToProps = dispatch =>
-  bindActionCreators({ setAddress, findRepresentatives }, dispatch)
+  bindActionCreators(
+    { setAddress, findRepresentatives, setLoadingStatus },
+    dispatch
+  )
 
 @reduxForm({ form: "Searcher" })
 @connect(undefined, mapDispatchToProps)
@@ -24,13 +31,14 @@ class Searcher extends PureComponent {
   static propTypes = {
     setAddress: func,
     handleSubmit: func,
-    findRepresentatives: func
+    findRepresentatives: func,
+    setLoadingStatus: func
   }
 
   _onSumbit = value => {
+    this.props.setLoadingStatus(true)
     this.props.setAddress(value)
     this.props.findRepresentatives()
-    console.log("fired async action")
   }
 
   _renderStreetInput({ input }) {

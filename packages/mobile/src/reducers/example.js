@@ -1,4 +1,4 @@
-import { increment, decrement } from 'lib/types'
+import { increment, decrement } from "lib/types"
 
 const INITIAL_STATE = {
   score: 0

@@ -1,7 +1,12 @@
 import { findRepresentatives } from "lib/types"
 import { Observable } from "rxjs/Observable"
+import { NavigationActions } from "react-navigation"
 
-import { setCongressman, setSenators } from "actions/search"
+import {
+  setCongressman,
+  setSenators,
+  toggleLoadingStatus
+} from "actions/search"
 import api from "api"
 
 export default [
@@ -27,6 +32,13 @@ export default [
         const congressman = offices[1].officialIndices.map(
           index => officials[index]
         )
-        return [setSenators(senators), setCongressman(congressman)]
+        return [
+          setSenators(senators),
+          setCongressman(congressman),
+          toggleLoadingStatus(),
+          NavigationActions.navigate({
+            routeName: "Found"
+          })
+        ]
       })
 ]

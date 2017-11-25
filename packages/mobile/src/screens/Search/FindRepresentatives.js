@@ -1,19 +1,7 @@
-import React, { PureComponent } from "react"
-import { Text, View, Button } from "react-native"
+import React from "react"
 
 import Searcher from "containers/Searcher"
 
-class FindRepresentatives extends PureComponent {
-  static navigationOptions = {
-    title: "Find Representatives"
-  }
-  _find = () => {
-    this.props.navigation.navigate("Found")
-  }
-
-  render() {
-    return <Searcher />
-  }
-}
+const FindRepresentatives = () => <Searcher />
 
 export default FindRepresentatives
