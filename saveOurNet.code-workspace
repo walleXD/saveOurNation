@@ -1,16 +1,22 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "packages/mobile"
-		},
-		{
-			"path": "packages/sugar"
-		}
-	],
-	"settings": {
-    "editor.formatOnSave": true
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "packages/mobile"
+    },
+    {
+      "path": "packages/sugar"
+    }
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.showSuggestionsAsSnippets": true,
+    "editor.snippetSuggestions": "top",
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+    }
   }
 }

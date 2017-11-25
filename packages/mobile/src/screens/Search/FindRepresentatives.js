@@ -1,6 +1,8 @@
 import React, { PureComponent } from "react"
 import { Text, View, Button } from "react-native"
 
+import Searcher from "containers/Searcher"
+
 class FindRepresentatives extends PureComponent {
   static navigationOptions = {
     title: "Find Representatives"
@@ -10,13 +12,7 @@ class FindRepresentatives extends PureComponent {
   }
 
   render() {
-    return (
-      <View>
-        {console.log(this.props)}
-        <Text>Find some Representatives</Text>
-        <Button onPress={this._find} title="Find" />
-      </View>
-    )
+    return <Searcher />
   }
 }
 
