@@ -7,11 +7,7 @@ import ExampleScreen from "./Example"
 import LandingScreen from "./Landing"
 import SearchScreen from "./Search"
 
-import initStore from "lib/initStore"
-
-const store = initStore()
-
-const MainNav = TabNavigator(
+export default TabNavigator(
   {
     Example: {
       screen: ExampleScreen,
@@ -37,11 +33,3 @@ const MainNav = TabNavigator(
     tabBarPosition: "bottom"
   }
 )
-
-const Screens = () => (
-  <Provider store={store}>
-    <MainNav />
-  </Provider>
-)
-
-export default Screens
