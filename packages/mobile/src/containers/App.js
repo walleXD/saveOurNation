@@ -4,11 +4,7 @@ import { addNavigationHelpers } from "react-navigation"
 
 import Screens from "screens"
 
-const mapStateToProps = state => ({
-  nav: state.nav
-})
-
-@connect(mapStateToProps)
+@connect(({ nav }) => ({ nav }))
 class App extends PureComponent {
   render() {
     return (

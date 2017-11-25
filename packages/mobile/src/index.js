@@ -12,8 +12,6 @@ import App from "containers/App"
 
 const store = initStore()
 
-api()
-
 const Root = () => (
   <Provider store={store}>
     <App />
@@ -29,7 +27,9 @@ Phase 3: Get points for making calls
 Phase 4: Get points getting others to make calls
 Phase 5: Internet Defenders list
 
-TODO: [ Phase 1 ]: Make screen for search
-TODO: [ Phase 1 ]: Get results & able to make calls
+TODO: [ Phase 1 ]: Make search screen functional
+TODO: [ Phase 1 ]: Make results screen
+TODO: [ Phase 1 ]: Able to make calls
+TODO: [ Phase 1 ]: Clean up components
 TODO: [ Basic ] - Setup firebase example
 */
