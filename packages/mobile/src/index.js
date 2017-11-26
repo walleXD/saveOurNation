@@ -27,7 +27,6 @@ Phase 3: Get points for making calls
 Phase 4: Get points getting others to make calls
 Phase 5: Internet Defenders list
 
-TODO: [ Phase 1 ]: Able to make calls
 TODO: [ Phase 1 ]: Clean up components
 TODO: [ Basic ] - Setup firebase example
 */

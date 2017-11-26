@@ -1,12 +1,19 @@
 import React from "react"
-import { View, Text, Image } from "react-native"
+import { View, Text, Image, TouchableOpacity } from "react-native"
 import { string, array } from "prop-types"
+import Communications from "react-native-communications"
 
 const RepresentativeCard = ({ name, phones, imgSrc }) => (
   <View>
     <Image style={{ width: 150, height: 150 }} source={{ uri: imgSrc }} />
     <Text>{name}</Text>
-    <Text>{phones}</Text>
+    <TouchableOpacity
+      onPress={() =>
+        Communications.phonecall(phones[0].replace(/-/g, ""), false)
+      }
+    >
+      <Text>{phones[0]}</Text>
+    </TouchableOpacity>
   </View>
 )
 

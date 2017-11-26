@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react"
 import { bindActionCreators } from "redux"
 import { connect } from "react-redux"
-import { View, Text } from "react-native"
+import { View, Text, ScrollView } from "react-native"
 import { array } from "prop-types"
 
 import RepresentativeCard from "components/RepresentativeCard"
@@ -31,7 +31,7 @@ class SearchResult extends PureComponent {
 
   render() {
     return (
-      <View>
+      <ScrollView>
         <Text>Representatives</Text>
         <View>
           <Text>Senators</Text>
@@ -41,7 +41,7 @@ class SearchResult extends PureComponent {
           <Text>Congressman</Text>
           {this._renderRepresentatives(this.props.congressman)}
         </View>
-      </View>
+      </ScrollView>
     )
   }
 }
