@@ -14,8 +14,10 @@ const SearchScreen = StackNavigator({
     }
   },
   Found: {
-    path: "found",
-    screen: Found
+    screen: Found,
+    navigationOptions: {
+      title: "Your Representatives"
+    }
   }
 })
 

@@ -5,17 +5,18 @@ import { NavigationActions } from "react-navigation"
 import {
   setCongressman,
   setSenators,
-  toggleLoadingStatus
+  toggleLoadingStatus,
+  setError
 } from "actions/search"
 import api from "api"
 
+// TODO: Fix error handling
 export default [
   (action$, store) =>
     action$
       .ofType(findRepresentatives)
       .flatMap(() => {
         const { search: { address } } = store.getState()
-        console.log(address)
         const addressInput = `
           ${address.Street}
           ${address.City}
@@ -41,4 +42,5 @@ export default [
           })
         ]
       })
+      .catch(error => setError(error.message))
 ]

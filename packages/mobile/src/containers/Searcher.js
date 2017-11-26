@@ -37,7 +37,7 @@ class Searcher extends PureComponent {
 
   _onSumbit = value => {
     this.props.setLoadingStatus(true)
-    this.props.setAddress(value)
+    !__DEV__ && this.props.setAddress(value)
     this.props.findRepresentatives()
   }
 

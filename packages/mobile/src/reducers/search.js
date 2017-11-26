@@ -8,12 +8,13 @@ import {
   clearError
 } from "lib/types"
 
+// 285 Fulton St, New York, NY 10007
 const INIT_STATE = {
   address: {
-    Street: "",
-    City: "",
-    State: "",
-    Zipcode: 0
+    Street: __DEV__ ? "85 Fulton St" : "",
+    City: __DEV__ ? "New York" : "",
+    State: __DEV__ ? "NY" : "",
+    Zipcode: __DEV__ ? 10007 : 0
   },
   senators: [{}, {}],
   congressman: [{}],

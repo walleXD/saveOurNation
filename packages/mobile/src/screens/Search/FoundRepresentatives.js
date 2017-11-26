@@ -1,17 +1,6 @@
 import React, { PureComponent } from "react"
-import { Text, View } from "react-native"
+import SearchResults from "containers/SearchResults"
 
-class FindRepresentatives extends PureComponent {
-  static navigationOptions = {
-    title: "Found Representative"
-  }
-  render() {
-    return (
-      <View>
-        <Text>Find some Representatives</Text>
-      </View>
-    )
-  }
-}
+const FindRepresentatives = () => <SearchResults />
 
 export default FindRepresentatives
