@@ -3,7 +3,7 @@ import { TabNavigator } from "react-navigation"
 import Screens from "screens"
 
 const INITIAL_STATE = Screens.router.getStateForAction(
-  Screens.router.getActionForPathAndParams("Search")
+  Screens.router.getActionForPathAndParams("Find")
 )
 
 export default (state = INITIAL_STATE, action) => {

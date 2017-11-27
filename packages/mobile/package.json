@@ -10,6 +10,7 @@
     "expo": "^23.0.0",
     "firebase": "^4.6.2",
     "form-urlencoded": "^2.0.4",
+    "native-base": "^2.3.3",
     "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-23.0.0.tar.gz",

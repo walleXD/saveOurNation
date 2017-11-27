@@ -1,8 +1,9 @@
 import React, { PureComponent } from "react"
 import { bindActionCreators } from "redux"
 import { connect } from "react-redux"
-import { View, Text, ScrollView } from "react-native"
+import { View, ScrollView } from "react-native"
 import { array } from "prop-types"
+import { Text } from "native-base"
 
 import RepresentativeCard from "components/RepresentativeCard"
 
@@ -19,26 +20,30 @@ class SearchResult extends PureComponent {
   }
 
   _renderRepresentatives(representatives) {
-    return representatives.map(({ name, phones, photoUrl }) => (
-      <RepresentativeCard
-        key={phones[0]}
-        phones={phones}
-        name={name}
-        imgSrc={photoUrl}
-      />
-    ))
+    return representatives.map(
+      ({ name, phones, photoUrl, party, channels, urls }) => (
+        <RepresentativeCard
+          key={phones[0]}
+          phones={phones}
+          name={name}
+          imgSrc={photoUrl}
+          party={party}
+          url={urls[0]}
+          channels={channels}
+        />
+      )
+    )
   }
 
   render() {
     return (
-      <ScrollView>
-        <Text>Representatives</Text>
+      <ScrollView style={{ margin: 10 }}>
         <View>
-          <Text>Senators</Text>
+          <Text H3>Senators</Text>
           {this._renderRepresentatives(this.props.senators)}
         </View>
         <View>
-          <Text>Congressman</Text>
+          <Text h1>Congressman</Text>
           {this._renderRepresentatives(this.props.congressman)}
         </View>
       </ScrollView>

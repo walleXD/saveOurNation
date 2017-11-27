@@ -1,13 +1,13 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux'
-import { composeWithDevTools } from 'remote-redux-devtools'
-import { createEpicMiddleware } from 'redux-observable'
-import { reactReduxFirebase, getFirebase } from 'react-redux-firebase'
-import { reduxFirestore, getFirestore } from 'redux-firestore'
-import firebase from 'firebase'
-import 'firebase/firestore'
+import { createStore, combineReducers, applyMiddleware } from "redux"
+import { composeWithDevTools } from "remote-redux-devtools"
+import { createEpicMiddleware } from "redux-observable"
+import { reactReduxFirebase, getFirebase } from "react-redux-firebase"
+import { reduxFirestore, getFirestore } from "redux-firestore"
+import firebase from "firebase"
+import "firebase/firestore"
 
-import reducers from 'reducers'
-import epics from 'epics'
+import reducers from "reducers"
+import epics from "epics"
 
 import {
   API_KEY,
@@ -16,7 +16,7 @@ import {
   PROJECT_ID,
   STORAGE_BUCKET,
   MESSAGE_SENDER_ID
-} from 'react-native-dotenv'
+} from "react-native-dotenv"
 
 const firebaseConfig = {
   apiKey: API_KEY,
@@ -28,7 +28,7 @@ const firebaseConfig = {
 }
 
 const reduxFirebaseConfig = {
-  userProfile: 'users'
+  userProfile: "users"
 }
 
 // init firebase
@@ -41,7 +41,7 @@ export default (preloadedState = {}) => {
     dependencies: { getFirebase, getFirestore }
   })
 
-  const devMiddlewares = [require('redux-immutable-state-invariant').default()]
+  const devMiddlewares = [require("redux-immutable-state-invariant").default()]
   const prodMiddlewares = [epicMiddleware]
 
   const createStoreWithMiddleware = composeWithDevTools(
