@@ -10,14 +10,14 @@ import tabBarComponent from "components/BottomNav"
 
 export default TabNavigator(
   {
-    Example: {
-      screen: ExampleScreen
+    Search: {
+      screen: SearchScreen
     },
     Landing: {
       screen: LandingScreen
     },
-    Search: {
-      screen: SearchScreen
+    Example: {
+      screen: ExampleScreen
     }
   },
   {

@@ -1,11 +1,13 @@
-Nov 21, 2017
-=============
-- [X] Setup redux in RN app
-- [X] Setup redux observable
-- [X] [ Phase 1 ] Setup Google Civic Info API requests
-- [X] [ Feature ] Integrate router w/ redux
-- [X] [ Phase 1 ] Make screen for search
-- [X] [ Phase 1 ] Make search screen functional
-- [X] [ Phase 1 ] Make results screen
-- [X] [ Phase 1 ] Able to make calls
-- [X] [ Phase 1 ] Clean up components
+✔ Setup redux in RN app
+✔ Setup redux observable
+✔ [ Phase 1 ] Setup Google Civic Info API requests
+✔ [ Feature ] Integrate router w/ redux
+✔ [ Phase 1 ] Make screen for search
+✔ [ Phase 1 ] Make search screen functional
+✔ [ Phase 1 ] Make results screen
+✔ [ Phase 1 ] Able to make calls
+✔ [ Phase 1 ] Clean up components @done(17-11-27 15:21)
+☐ [ Phase 1.5 ] - Clean up styling quirks @started(17-11-27 15:24)
+☐ [ Phase 1.7 ] - Figure out the details of campaign mode
+☐ [ Phase 2 ] - Setup auth for campaign login w/ firebase
+☐ [ Phase 2 ] - Add campaign mode tab

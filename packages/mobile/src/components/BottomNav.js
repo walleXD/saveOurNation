@@ -8,10 +8,10 @@ const BottomNav = props => (
       <Button
         vertical
         active={props.navigationState.index === 0}
-        onPress={() => props.navigation.navigate("Example")}
+        onPress={() => props.navigation.navigate("Search")}
       >
-        <Icon name="bowtie" />
-        <Text>Example</Text>
+        <Icon android="md-search" ios="ios-search" />
+        <Text>Search</Text>
       </Button>
       <Button
         vertical
@@ -24,10 +24,10 @@ const BottomNav = props => (
       <Button
         vertical
         active={props.navigationState.index === 2}
-        onPress={() => props.navigation.navigate("Search")}
+        onPress={() => props.navigation.navigate("Example")}
       >
-        <Icon android="md-search" ios="ios-search" />
-        <Text>Search</Text>
+        <Icon name="bowtie" />
+        <Text>Example</Text>
       </Button>
     </FooterTab>
   </Footer>

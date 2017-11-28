@@ -9,10 +9,7 @@ import Found from "./FoundRepresentatives"
 const SearchScreen = StackNavigator(
   {
     Find: {
-      screen: Find,
-      navigationOptions: {
-        title: "Find Representatives"
-      }
+      screen: Find
     },
     Found: {
       screen: Found,

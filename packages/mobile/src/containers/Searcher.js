@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react"
-import { View, Text } from "react-native"
+import { View, Text, Picker as RawPicker, Platform } from "react-native"
 import { reduxForm, Field } from "redux-form"
 import { bindActionCreators } from "redux"
 import { connect } from "react-redux"
@@ -49,6 +49,8 @@ class Searcher extends PureComponent {
       <Item>
         <Label>{input.name}</Label>
         <Picker
+          iosHeader="State"
+          style={{ width: Platform.OS === "ios" ? undefined : 200 }}
           selectedValue={input.value}
           onValueChange={value => input.onChange(value)}
           mode="dropdown"
