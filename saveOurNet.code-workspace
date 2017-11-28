@@ -2,12 +2,6 @@
   "folders": [
     {
       "path": "."
-    },
-    {
-      "path": "packages/mobile"
-    },
-    {
-      "path": "packages/sugar"
     }
   ],
   "settings": {
