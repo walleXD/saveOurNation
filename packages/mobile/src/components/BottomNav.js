@@ -29,6 +29,14 @@ const BottomNav = props => (
         <Icon name="bowtie" />
         <Text>Example</Text>
       </Button>
+      <Button
+        vertical
+        active={props.navigationState.index === 3}
+        onPress={() => props.navigation.navigate("Storybook")}
+      >
+        <Icon name="md-speedometer" />
+        <Text>Stories</Text>
+      </Button>
     </FooterTab>
   </Footer>
 )

@@ -5,7 +5,7 @@ import { Provider } from "react-redux"
 import ExampleScreen from "./Example"
 import LandingScreen from "./Landing"
 import SearchScreen, { Icon as SearchIcon } from "./Search"
-
+import StorybookScreen from "../storybook"
 import tabBarComponent from "components/BottomNav"
 
 export default TabNavigator(
@@ -18,6 +18,9 @@ export default TabNavigator(
     },
     Example: {
       screen: ExampleScreen
+    },
+    Storybook: {
+      screen: StorybookScreen
     }
   },
   {

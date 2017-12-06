@@ -10,6 +10,7 @@
   },
   "env": {
     "es6": true,
+    "node": true,
     "react-native/react-native": true
   },
   "rules": {
@@ -18,8 +19,8 @@
   "settings": {
     "import/resolver": {
       "babel-module": {
-        "root": ["./packages/mobile/src"],
-        "extensions": [".js", ".ios.js", ".android.js"],
+        "root": "./src",
+        "extensions": [".js", ".web.js", ".ios.js", ".android.js"],
         "alias": {}
       }
     }
