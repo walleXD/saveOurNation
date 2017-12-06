@@ -1,10 +1,19 @@
 import React, { PureComponent } from "react"
-import { View, Text, Picker as RawPicker, Platform } from "react-native"
+import { View, Picker as RawPicker, Platform } from "react-native"
 import { reduxForm, Field } from "redux-form"
 import { bindActionCreators } from "redux"
 import { connect } from "react-redux"
 import { func } from "prop-types"
-import { Picker, Form, Item, Input, Label, Button, Icon } from "native-base"
+import {
+  Picker,
+  Text,
+  Form,
+  Item,
+  Input,
+  Label,
+  Button,
+  Icon
+} from "native-base"
 
 import {
   setAddress,
@@ -73,8 +82,6 @@ class Searcher extends PureComponent {
         <Field name="Zipcode" component={this._renderInput} />
         <Button
           iconRight
-          light
-          primary
           rounded
           block
           style={{ marginTop: 20 }}

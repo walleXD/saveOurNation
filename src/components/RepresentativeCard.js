@@ -18,7 +18,7 @@ const RepresentativeCard = props => (
   <Card>
     <CardItem header>
       <Left>
-        <Thumbnail source={{ uri: props.imgSrc }} />
+        <Thumbnail large source={{ uri: props.imgSrc }} />
         <Body>
           <Text>{props.name}</Text>
           <Text note>{props.party}</Text>

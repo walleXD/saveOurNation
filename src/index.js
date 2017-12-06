@@ -3,6 +3,7 @@ import "rxjs/Rx"
 import Expo from "expo"
 import React, { PureComponent } from "react"
 import { Provider } from "react-redux"
+import { Platform } from "react-native"
 import { addNavigationHelpers } from "react-navigation"
 
 import Screens from "screens"
@@ -14,10 +15,12 @@ const store = initStore()
 
 class Root extends PureComponent {
   async componentWillMount() {
-    await Expo.Font.loadAsync({
-      Roboto: require("native-base/Fonts/Roboto.ttf"),
-      Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf")
-    })
+    if (Platform.OS === "ios") {
+      await Expo.Font.loadAsync({
+        Roboto: require("native-base/Fonts/Roboto.ttf"),
+        Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf")
+      })
+    }
   }
 
   render() {
