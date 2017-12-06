@@ -4,6 +4,7 @@ packages/mobile_rn
 *.env.*
 .expo/
 npm-debug.*
+.next
 
 ### Android ###
 # Built application files

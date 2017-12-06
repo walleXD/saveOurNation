@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "saveournet",
-    "description": "Campaign & Compete to save Net Neutrality",
+    "description": "Campaign & Compete to a better citizen",
     "slug": "saveournet",
     "privacy": "public",
     "sdkVersion": "23.0.0",
@@ -15,7 +15,7 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false
     }
   }
 }
